@@ -1,0 +1,155 @@
+*{margin:0;padding:0;box-sizing:border-box}
+html,body,#scene{width:100%;height:100%;overflow:hidden;background:#08111f;font-family:Poppins}
+#bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+#overlay{position:absolute;inset:0;background:rgba(0,0,20,.35)}
+.hero{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;color:#fff;z-index:3}
+.hero h1{font:700 72px Cinzel;text-shadow:0 0 25px #fff}
+.hero p{margin:20px 0 35px;font-size:24px}
+button{padding:14px 30px;border:none;border-radius:30px;background:#bfe8ff;cursor:pointer}
+#stars{position:absolute;inset:0}
+.star{position:absolute;width:2px;height:2px;background:#fff;border-radius:50%;box-shadow:0 0 8px #fff}
+#bookWrap{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) scale(.2);opacity:0;z-index:5}
+#book{width:620px;height:380px;display:flex;box-shadow:0 0 50px rgba(255,215,0,.5)}
+.cover{width:50%;background:linear-gradient(135deg,#603d15,#a97a34);border:3px solid gold;transform-origin:left}
+.page{width:50%;background:#fdf7e7;padding:24px;display:flex;flex-direction:column}
+.page h2{font-family:Cinzel;margin-bottom:14px}
+.page input{padding:10px;margin:18px 0}
+#msg{margin-top:12px;color:#245}
+
+#forestScene{display:none;position:absolute;inset:0;background:linear-gradient(#081624,#103b2b);color:#fff;text-align:center;z-index:20}
+.forestOverlay{position:absolute;inset:0;background:radial-gradient(circle,#335 0,#081624 80%)}
+#forestScene h1{position:relative;margin-top:80px;font:700 58px Cinzel}
+#forestScene p{position:relative;font-size:24px}
+.butterfly{position:absolute;font-size:24px}
+#envelope{position:absolute;left:50%;bottom:80px;transform:translateX(-50%);font-size:64px;cursor:pointer;opacity:0}
+
+
+/* ===== Cinematic Real Book Upgrade ===== */
+
+#bookWrap{
+ perspective:1800px;
+}
+
+#book{
+ width:700px;
+ height:430px;
+ position:relative;
+ display:flex;
+ filter:drop-shadow(0 30px 40px rgba(0,0,0,.55));
+}
+
+.cover{
+ width:50%;
+ position:relative;
+ transform-origin:left center;
+ background:
+ radial-gradient(circle at 30% 20%,rgba(255,223,120,.15),transparent 30%),
+ linear-gradient(135deg,#3e220d,#6b3f18,#4d2b12);
+ border:5px solid #c8a03c;
+ border-radius:14px 2px 2px 14px;
+ box-shadow:
+ inset 0 0 25px rgba(255,230,160,.12),
+ inset -18px 0 20px rgba(0,0,0,.35),
+ 0 15px 30px rgba(0,0,0,.35);
+}
+
+.cover::before{
+ content:"☾";
+ position:absolute;
+ left:50%;
+ top:42%;
+ transform:translate(-50%,-50%);
+ font-size:82px;
+ color:#e8c35a;
+ text-shadow:0 0 18px rgba(255,215,0,.8);
+}
+
+.cover::after{
+ content:"THE DREAM\A BEYOND THE STARS";
+ white-space:pre;
+ position:absolute;
+ bottom:48px;
+ left:50%;
+ transform:translateX(-50%);
+ text-align:center;
+ font-family:Cinzel,serif;
+ color:#f8e6b5;
+ letter-spacing:3px;
+ line-height:1.5;
+ font-size:18px;
+}
+
+.page{
+ width:50%;
+ position:relative;
+ background:
+ repeating-linear-gradient(
+  to bottom,
+  #f8efd5 0px,
+  #f8efd5 28px,
+  #f2e6c6 29px
+ );
+ border-radius:0 12px 12px 0;
+ box-shadow:
+ inset 18px 0 25px rgba(0,0,0,.18),
+ inset -2px 0 0 #d9c8a2;
+}
+
+.page::before{
+ content:"";
+ position:absolute;
+ left:-18px;
+ top:0;
+ width:18px;
+ height:100%;
+ background:linear-gradient(to right,#ccb98c,#efe1bc);
+}
+
+#book::before{
+ content:"";
+ position:absolute;
+ left:49.2%;
+ top:0;
+ width:12px;
+ height:100%;
+ background:linear-gradient(to right,#2a1709,#5b3516,#2a1709);
+ z-index:5;
+ border-radius:6px;
+}
+
+#book{
+ animation:bookFloat 5s ease-in-out infinite;
+}
+
+@keyframes bookFloat{
+ 0%,100%{transform:translateY(0) rotateX(0deg);}
+ 50%{transform:translateY(-10px) rotateX(1deg);}
+}
+
+
+#letterOverlay{
+position:fixed;inset:0;
+display:none;
+justify-content:center;
+align-items:center;
+background:rgba(0,0,0,.65);
+z-index:9999;
+}
+#letterCard{
+width:700px;
+max-width:92%;
+background:#fffaf0;
+padding:35px;
+border-radius:16px;
+box-shadow:0 0 40px rgba(255,215,0,.4);
+}
+#typedLetter{
+white-space:pre-wrap;
+font-size:28px;
+line-height:1.6;
+font-family:'Caveat',cursive;
+margin-top:15px;
+}
+#closeLetter{
+margin-top:20px;
+}
