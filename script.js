@@ -67,7 +67,7 @@ oldUnlock.onclick=()=>{
 // ---- V7 Letter Integration ----
 const __msg=`Happy Birthday, Pippo!
 
-May every action take you one step closer to your Dream.
+May your every action take you one step closer to your Dream.
 
 Never stop dreaming.
 Never stop creating.
