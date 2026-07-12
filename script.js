@@ -37,7 +37,7 @@ const oldUnlock=document.getElementById('unlock');
 oldUnlock.onclick=()=>{
  const pw=document.getElementById('pw').value.trim();
  const msg=document.getElementById('msg');
- if(pw==='Pippo_The_Animator'){
+ if(pw==='Animator'){
    msg.textContent='✨ The forest awakens...';
    msg.style.color='green';
    setTimeout(()=>{
@@ -67,7 +67,7 @@ oldUnlock.onclick=()=>{
 // ---- V7 Letter Integration ----
 const __msg=`Happy Birthday, Pippo!
 
-May every action take you one step closer to Disney.
+May every action take you one step closer to your Dream.
 
 Never stop dreaming.
 Never stop creating.
