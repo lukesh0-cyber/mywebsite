@@ -47,7 +47,7 @@ oldUnlock.onclick=()=>{
        for(let i=0;i<20;i++){
          let b=document.createElement('div');
          b.className='butterfly';
-         b.textContent='🦋🦋';
+         b.textContent='🦋✨🦋';
          butterflies.appendChild(b);
          b.style.left='50%'; b.style.top='55%';
          gsap.to(b,{x:(Math.random()-.5)*900,y:(Math.random()-.5)*500,duration:5,repeat:-1,yoyo:true});
