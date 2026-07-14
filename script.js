@@ -5,6 +5,7 @@ const lines=[
 "Dear Dreamer...",
 "The stars have waited patiently for you.",
 "Only one word may unlock this journey."
+"Hint : Some thing that u imagined"
 ];
 function typeText(el,text,delay){
  let i=0;
